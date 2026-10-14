@@ -28,13 +28,13 @@
 
 ## Скачать
 
-Последняя версия — **0.34.7**: [страница релиза](https://github.com/DiehlWierce/rust-wastes-builds/releases/latest).
+Последняя версия — **0.34.8**: [страница релиза](https://github.com/DiehlWierce/rust-wastes-builds/releases/latest).
 
 | Система | Архив |
 |---|---|
-| Windows 10/11 | [RustWastes-0.34.7-Windows.zip](https://github.com/DiehlWierce/rust-wastes-builds/releases/latest/download/RustWastes-0.34.7-Windows.zip) |
-| macOS (Intel и Apple Silicon) | [RustWastes-0.34.7-macOS.zip](https://github.com/DiehlWierce/rust-wastes-builds/releases/latest/download/RustWastes-0.34.7-macOS.zip) |
-| Приставки (Anbernic и др., PortMaster) | [RustWastes-0.34.7-PortMaster.zip](https://github.com/DiehlWierce/rust-wastes-builds/releases/latest/download/RustWastes-0.34.7-PortMaster.zip) |
+| Windows 10/11 | [RustWastes-0.34.8-Windows.zip](https://github.com/DiehlWierce/rust-wastes-builds/releases/latest/download/RustWastes-0.34.8-Windows.zip) |
+| macOS (Intel и Apple Silicon) | [RustWastes-0.34.8-macOS.zip](https://github.com/DiehlWierce/rust-wastes-builds/releases/latest/download/RustWastes-0.34.8-macOS.zip) |
+| Приставки (Anbernic и др., PortMaster) | [RustWastes-0.34.8-PortMaster.zip](https://github.com/DiehlWierce/rust-wastes-builds/releases/latest/download/RustWastes-0.34.8-PortMaster.zip) |
 
 Сборки тестовые и не подписаны. На настоящей приставке сборка PortMaster ещё не проверялась.
 
@@ -58,22 +58,13 @@
 - **Ночь, бури, звери.** Смена дня и ночи, пыльные бури, ездовые звери (H), календарь с рынками и праздниками.
 - **Геймпад и приставки.** Всё управляется с геймпада, подсказки кнопок — в каждом окне.
 
-## Что нового в 0.34.7
+## Что нового в 0.34.8
 
-_приставка: меню, город, загрузка_
+_приставка: исправление чёрного экрана_
 
-- Приставка: меню паузы снова слушается кнопок (раньше на паузе кнопки не доходили до игры).
-- Меню паузы: кнопки больше не вылезают за рамку; окошко «Отчёт сохранён» тоже стало больше.
-- Приставка: картинка рисуется в отдельном потоке, физика — в своём, работают другие ядра.
-  Жители города дальше двух экранов от героя спят (не думают, не ходят, не рисуются), шаг и
-  потребности жителей считаются реже. Отряды и твои люди живут как раньше.
-- Загрузка мира заметно быстрее: тяжёлая работа ушла в фон и порезана по кадрам. На экране
-  загрузки — полоса, что сейчас делается, подсказка по кнопкам, а на приставке пояснение, что
-  несколько секунд загрузки — это нормально. «Продолжить» больше не грузит лишнюю зону.
-- Лог нагрузки (Настройки → «Нагрузка на экране и лог в файл») пишет, сколько кадра уходит на
-  ИИ, тела, анимацию, массовку, мир и навигацию — пришли perf_log.txt с приставки.
-- Если на приставке после обновления чёрный экран или вылет — открой «Rust Wastes.sh» и допиши
-  к строке запуска игры ключ --render-thread safe, и напиши об этом.
+- Приставка: в 0.34.7 игра на RG34XX-SP не запускалась (чёрный экран и вылет при старте) —
+  отдельный поток отрисовки и физики убран, игра снова стартует как в 0.34.6. Остальное из
+  0.34.7 (пауза, меню, загрузка мира, лёгкий город) осталось.
 
 [История версий](https://github.com/DiehlWierce/rust-wastes-builds/releases) — полный список изменений по каждому релизу.
 
